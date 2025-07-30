@@ -1,7 +1,9 @@
-export default function Header() {
+function Footer() {
   return (
-    <footer>
+    <footer className="shrink-0">
       <h1>Footer</h1>
     </footer>
   );
 }
+
+export default Footer;
