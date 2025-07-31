@@ -98,10 +98,10 @@ function Main({ twoColumns = true }) {
   const unpinnedNotes = notes.filter((note) => !note.pinned);
 
   return (
-    <main className="w-full p-2 bg-[var(--bg-mid)] grow overflow-y-auto mx-auto space-y-6">
+    <main className="w-full  p-2 bg-[var(--bg-mid)] grow overflow-y-auto mx-auto space-y-6">
       {/* Pinned Section */}
       {pinnedNotes.length > 0 && (
-        <section>
+        <section className="max-w-5xl mx-auto">
           <h2 className="text-sm font-semibold text-muted mb-2 px-1">
             📌 Pinned Notes
           </h2>
@@ -120,7 +120,7 @@ function Main({ twoColumns = true }) {
       )}
 
       {/* Unpinned Section */}
-      <section>
+      <section className="max-w-5xl mx-auto">
         <h2 className="text-sm font-semibold text-muted mb-2 px-1">📝 Notes</h2>
         <div
           className={`w-full ${
