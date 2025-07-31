@@ -1,6 +1,6 @@
 import { useRef, useState, useEffect } from "react";
 
-function Card({ title, content }) {
+function Card({ title, content, images = true }) {
   const contentRef = useRef(null);
   const [isClipped, setIsClipped] = useState(false);
 
@@ -17,6 +17,9 @@ function Card({ title, content }) {
         <p>{content}</p>
       </div>
       {isClipped && <div className="text-xl font-bold select-none">…</div>}
+      {images && (
+        <div className="text-sm font-bold select-none">list of images</div>
+      )}
     </div>
   );
 }
