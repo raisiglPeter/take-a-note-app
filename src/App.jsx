@@ -95,6 +95,12 @@ const notes = [
   },
 ];
 
+// TODO:
+// Text ellipsis npm install --save react-lines-ellipsis
+// Grid component with Masonic
+// DnD dnd-kit for notes
+// Supabase Auth for backup and sign-in
+
 function App() {
   return (
     <>
