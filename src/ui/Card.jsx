@@ -1,22 +1,24 @@
 import { useRef, useState, useEffect } from "react";
 
-function Card({ title, content, images = true }) {
+function Card({ title, description, images = null }) {
   const contentRef = useRef(null);
-  const [isClipped, setIsClipped] = useState(false);
+  const [isDescriptionClipped, setIsDescriptionClipped] = useState(false);
 
   useEffect(() => {
     if (!contentRef.current) return;
     const el = contentRef.current;
-    setIsClipped(el.scrollHeight > el.clientHeight);
-  }, [content]);
+    setIsDescriptionClipped(el.scrollHeight > el.clientHeight);
+  }, [description]);
 
   return (
     <div className="bg-white w-full p-3 max-w-screen-md rounded-2xl pb-3 self-start">
       <div ref={contentRef} className="max-h-[555px] overflow-clip">
-        <h1 className="text-lg font-bold">{title}</h1>
-        <p>{content}</p>
+        <h1 className="text-lg font-medium line-clamp-3">{title}</h1>
+        <p>{description}</p>
       </div>
-      {isClipped && <div className="text-xl font-bold select-none">…</div>}
+      {isDescriptionClipped && (
+        <div className="text-xl font-bold select-none">…</div>
+      )}
       {images && (
         <div className="text-sm font-bold select-none">list of images</div>
       )}
