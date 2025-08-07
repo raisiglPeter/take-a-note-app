@@ -34,7 +34,7 @@ const notes = [
     id: 1004,
     title: "Book Recommendations 📚",
     description:
-      "Atomic Habits by James Clear\nDeep Work by Cal Newport\nThe Pragmatic Programmer",
+      "Atomic Habits by James Clear\nDeep Work by Cal Newport\nThe Pragmatic Programmer\nAtomic Habits by James Clear\nDeep Work by Cal Newport\nThe Pragmatic ProgrammerAtomic Habits by James Clear\nDeep Work by Cal Newport\nThe Pragmatic Programmer",
     images: [],
     pinned: false,
     checkbox: false,
