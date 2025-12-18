@@ -9,7 +9,7 @@ function Header({ onMenuToggle, onThemeToggle }) {
         <FontAwesomeIcon icon={faList} className="text-xl" />
       </Button>
 
-      <p className="font-bold text-2xl">Take-A-Note</p>
+      <p className="font-bold text-lg select-none">Take-A-Note</p>
 
       <Button onClick={onThemeToggle}>
         <FontAwesomeIcon icon={faPalette} className="text-xl" />
