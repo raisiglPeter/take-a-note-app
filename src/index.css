@@ -1,83 +1,86 @@
 @import "tailwindcss";
+@plugin "daisyui" {
+  themes: light, dark, cupcake, sea;
+}
 
-:root {
+/* 1. Register your custom variables into Tailwind v4's design engine */
+@theme {
   /* Pastel Greens */
-  --green-light: #d4f4dd;
-  --green-dark: #a0e6b2;
-  --green-darker: #5cbf81;
+  --color-green-light: #d4f4dd;
+  --color-green-dark: #a0e6b2;
+  --color-green-darker: #5cbf81;
 
   /* Pastel Blues */
-  --blue-light: #dceeff;
-  --blue-dark: #a7d0f5;
-  --blue-darker: #498ac3;
+  --color-blue-light: #dceeff;
+  --color-blue-dark: #a7d0f5;
+  --color-blue-darker: #498ac3;
 
   /* Pastel Reds */
-  --red-light: #ffd6d6;
-  --red-dark: #f5a3a3;
-  --red-darker: #d45858;
+  --color-red-light: #ffd6d6;
+  --color-red-dark: #f5a3a3;
+  --color-red-darker: #d45858;
 
   /* Pastel Yellows */
-  --yellow-light: #fff7d6;
-  --yellow-dark: #f5e8a3;
-  --yellow-darker: #c8b948;
+  --color-yellow-light: #fff7d6;
+  --color-yellow-dark: #f5e8a3;
+  --color-yellow-darker: #c8b948;
 
   /* Backgrounds */
-  --bg-light: #f9f9f9;
-  --bg-mid: #eeeeee;
-  --bg-dark: #e0e0e0;
+  --color-bg-light: #f9f9f9;
+  --color-bg-mid: #eeeeee;
+  --color-bg-dark: #e0e0e0;
 
   /* Text */
-  --text-dark: #2b2b2b;
-  --text-mid: #707070;
-  --text-light: #ffffff;
+  --color-text-dark: #2b2b2b;
+  --color-text-mid: #707070;
+  --color-text-light: #ffffff;
 
   /* Accent */
-  --accent: #bfa2db;
-  --accent-hover: #d7c6eb;
+  --color-accent: #bfa2db;
+  --color-accent-hover: #d7c6eb;
 
-  /* Default theme variables */
-  --theme-bg: var(--bg-mid);
-  --theme-text: var(--text-mid);
-  --theme-accent: var(--accent);
+  /* Dynamic Theme Variables */
+  --color-theme-bg: var(--theme-bg);
+  --color-theme-text: var(--theme-text);
+  --color-theme-accent: var(--theme-accent);
 }
 
-* {
-  box-sizing: border-box;
-}
+/* 2. Set global fallbacks and base styles */
+:root {
+  --theme-bg: var(--color-bg-mid);
+  --theme-text: var(--color-text-mid);
+  --theme-accent: var(--color-accent);
 
-html,
-body,
-#root {
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-}
-
-body {
   font-family: "Montserrat", sans-serif;
 }
 
-/* Theme classes */
+body {
+  min-height: 100vh;
+  background-color: var(--color-blue-light);
+  color: var(--color-text-dark);
+}
+
+/* 3. Keep Clone Dynamic Card Modifiers */
 .theme-blue {
-  --theme-bg: var(--blue-light);
-  --theme-text: var(--blue-darker);
-  --theme-accent: var(--blue-dark);
+  --theme-bg: var(--color-blue-light);
+  --theme-text: var(--color-blue-darker);
+  --theme-accent: var(--color-blue-dark);
 }
 
 .theme-green {
-  --theme-bg: var(--green-light);
-  --theme-text: var(--green-darker);
-  --theme-accent: var(--green-dark);
+  --theme-bg: var(--color-green-light);
+  --theme-text: var(--color-green-darker);
+  --theme-accent: var(--color-green-dark);
 }
 
 .theme-red {
-  --theme-bg: var(--red-light);
-  --theme-text: var(--red-darker);
-  --theme-accent: var(--red-dark);
+  --theme-bg: var(--color-red-light);
+  --theme-text: var(--color-red-darker);
+  --theme-accent: var(--color-red-dark);
 }
 
 .theme-yellow {
-  --theme-bg: var(--yellow-light);
-  --theme-text: var(--yellow-darker);
-  --theme-accent: var(--yellow-dark);
+  --theme-bg: var(--color-yellow-light);
+  --theme-text: var(--color-yellow-darker);
+  --theme-accent: var(--color-yellow-dark);
 }
