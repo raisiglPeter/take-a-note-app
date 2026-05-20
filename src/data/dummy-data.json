@@ -13,7 +13,7 @@
   },
   {
     "id": "2",
-    "title": "Grocery List",
+    "title": "",
     "content": "",
     "type": "checklist",
     "theme": "theme-green",
@@ -35,8 +35,9 @@
     "theme": "theme-yellow",
     "layout": { "x": 4, "y": 0, "w": 2, "h": 4 },
     "metadata": {
-      "imageUrl": "https://images.unsplash.com/photo-1493933319297-393757d7f1d4?auto=format&fit=crop&q=80&w=400",
-      "imageAlt": "Minimalist desk setup"
+      "imageUrl": "https://fastly.picsum.photos/id/0/5000/3333.jpg?hmac=_j6ghY5fCfSD6tvtcV74zXivkJSPIfR9B8w34XeQmvU",
+      "imageAlt": "Minimalist desk setup",
+      "labels": ["monitor", "audio"]
     }
   },
   {

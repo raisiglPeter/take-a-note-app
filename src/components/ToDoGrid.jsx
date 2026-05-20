@@ -4,18 +4,18 @@ import {
 } from "react-grid-layout";
 import Card from "./Card";
 
-function ToDoGrid({ data = [] }) {
+function ToDoGrid({ data = [], onNoteClick }) {
   const { width, containerRef, mounted } = useContainerWidth();
+  let dragOccurred = false;
 
-  // 1. DYNAMIC LAYOUT GENERATION
-  // We ignore the x/y in the JSON and calculate them based on index
+  // FIXME: DYNAMIC LAYOUT GENERATION still doesn't replace empty space on rows
   const generateLayout = (cols) => {
     return data.map((note, index) => ({
       i: note.id,
-      x: index % cols, // Cycles 0, 1, 2, 3 (for 4 columns)
+      x: index % cols, // 0, 1, 2, 3 for 4 cols
       y: 0, // Increments row every 'cols' items
       w: 1,
-      h: note.type === "image" ? 3 : 2, // Bigger height for images
+      h: note.type === "image" ? 3 : 2,
     }));
   };
 
@@ -27,7 +27,7 @@ function ToDoGrid({ data = [] }) {
   };
 
   return (
-    <div ref={containerRef} className="relative w-full max-w-7xl mx-auto p-4">
+    <div ref={containerRef} className="relative w-full max-w-7xl mx-auto">
       {mounted && (
         <ResponsiveGridLayout
           layouts={layouts}
@@ -42,7 +42,15 @@ function ToDoGrid({ data = [] }) {
           preventCollision={false}
         >
           {data.map((note) => (
-            <div key={note.id} className="cursor-default">
+            <div
+              key={note.id}
+              className="cursor-default"
+              onClick={() => {
+                if (!dragOccurred && onNoteClick) {
+                  onNoteClick(note);
+                }
+              }}
+            >
               <Card content={note} />
             </div>
           ))}

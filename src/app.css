@@ -24,15 +24,12 @@
 
 /* ghost placeholder  */
 .react-grid-placeholder {
-  background: rgba(0, 0, 0, 0.05) !important; /* Very subtle gray */
-  border: 2px dashed rgba(0, 0, 0, 0.1) !important; /* Dashed border for that 'drop here' feel */
-  border-radius: 1rem !important; /* Match your card's rounded-xl / 16px */
+  background: rgba(0, 0, 0, 0.05) !important;
+  border-radius: 1rem !important;
   opacity: 0.5 !important;
-  transition-duration: 150ms !important; /* Smoothly slides to the next spot */
+  transition-duration: 150ms !important;
   z-index: 2 !important;
 }
-
-/* Optional: If you want a "Light Mode" specific look */
 .dark .react-grid-placeholder {
   background: rgba(255, 255, 255, 0.05) !important;
   border: 2px dashed rgba(255, 255, 255, 0.1) !important;

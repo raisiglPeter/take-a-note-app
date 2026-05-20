@@ -4,15 +4,14 @@ import {
   faPalette,
   faImage,
   faRotateLeft,
-  faThumbTack,
 } from "@fortawesome/free-solid-svg-icons";
 
 export default function Card({ content }) {
   return (
-    <div className="card card-xs bg-base-100 shadow-sm border border-base-300 h-full w-full group overflow-hidden transition-all duration-200 hover:shadow-md">
-      {/* 1. Figure: Correctly accessing metadata.imageUrl */}
-      {content.type === "image" && (
-        <figure className="h-28 overflow-hidden">
+    <div className="card card-xs bg-base-100 shadow-sm border border-base-300 h-full w-full group overflow-hidden transition-all duration-200 hover:shadow-md ">
+      {/* 1. Optional Image metadata.imageUrl */}
+      {content.metadata.imageUrl && content.metadata.imageAlt && (
+        <figure className="h-16 overflow-hidden">
           <img
             src={content.metadata.imageUrl}
             alt={content.metadata.imageAlt || "Note image"}
@@ -21,15 +20,13 @@ export default function Card({ content }) {
         </figure>
       )}
 
-      {/* 2. Drag Handle: Includes Title and Pin */}
-      <div className="drag-handle p-3 pb-1 cursor-move flex justify-between items-center">
-        <h2 className="text-sm font-bold truncate pr-2">
+      {/* 2. Title */}
+      <div className="drag-handle p-2 cursor-move flex justify-start items-center bg-gray-100">
+        <h2
+          className={`text-sm font-bold truncate pr-2 ${content.title || "italic"}`}
+        >
           {content.title || "Untitled"}
         </h2>
-        <FontAwesomeIcon
-          icon={faThumbTack}
-          className={`text-[10px] transition-opacity ${content.metadata.isPinned ? "text-primary" : "opacity-0 group-hover:opacity-20"}`}
-        />
       </div>
 
       <div className="card-body pt-0">
