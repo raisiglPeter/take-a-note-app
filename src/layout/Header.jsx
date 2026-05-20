@@ -1,18 +1,12 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faList, faPalette } from "@fortawesome/free-solid-svg-icons";
+// import { faPalette } from "@fortawesome/free-solid-svg-icons";
 import Button from "../components/Button";
 import Search from "../components/Search";
 
-export default function Header({ onMenuToggle, onThemeToggle }) {
+export default function Header() {
   return (
-    <header className="h-fit flex justify-between items-center p-4 bg-blue-light text-text-dark">
-      <Button onClick={onMenuToggle}>
-        <FontAwesomeIcon icon={faList} className="text-xl" />
-      </Button>
+    <header className="h-12 flex justify-center items-center p-4">
       <Search />
-      <Button onClick={onThemeToggle}>
-        <FontAwesomeIcon icon={faPalette} className="text-xl" />
-      </Button>
     </header>
   );
 }
