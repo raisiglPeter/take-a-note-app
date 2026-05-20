@@ -8,7 +8,7 @@ function OpenSidebar() {
       <div className="drawer-content">
         {/* Page content here */}
         <label htmlFor="my-drawer-1" className="btn drawer-button">
-          <FontAwesomeIcon className="text-2xl" icon={faRightToBracket} />
+          <FontAwesomeIcon className="text-xl" icon={faRightToBracket} />
         </label>
       </div>
       <div className="drawer-side">

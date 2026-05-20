@@ -1,10 +1,11 @@
 import ToDoGrid from "../components/ToDoGrid";
 
-export default function Main() {
+export default function Main({ data }) {
   return (
-    <main className="flex flex-col flex-1 justify-start items-center flex-center backdrop-brightness-90 w-full h-full">
-      <ToDoGrid />
-      is this working
+    <main className="flex-1 w-full bg-base-200/50 overflow-y-auto">
+      <div className="max-w-7xl mx-auto w-full">
+        <ToDoGrid data={data} />
+      </div>
     </main>
   );
 }
