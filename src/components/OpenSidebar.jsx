@@ -1,3 +1,6 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faRightToBracket } from "@fortawesome/free-solid-svg-icons";
+
 function OpenSidebar() {
   return (
     <div className="drawer">
@@ -5,7 +8,7 @@ function OpenSidebar() {
       <div className="drawer-content">
         {/* Page content here */}
         <label htmlFor="my-drawer-1" className="btn drawer-button">
-          Open drawer
+          <FontAwesomeIcon className="text-2xl" icon={faRightToBracket} />
         </label>
       </div>
       <div className="drawer-side">

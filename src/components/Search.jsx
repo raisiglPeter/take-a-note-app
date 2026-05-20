@@ -6,8 +6,8 @@ function Search() {
     <input
       type="text"
       value={searchInput}
-      placeholder="Type here"
-      className="input"
+      placeholder="Search..."
+      className="input bg-base-200 focus:bg-base-100 w-full max-w-2xl"
       onChange={(e) => setSearchInput(e.target.value)}
     />
   );
