@@ -1,8 +1,8 @@
-import Header from "./layout/Header";
-import Main from "./layout/Main";
-import Footer from "./layout/Footer";
+import Header from "@/layout/Header";
+import Main from "@/layout/Main";
+import Footer from "@/layout/Footer";
 
-import dummy_data from "../src/data/dummy-data.json";
+import dummy_data from "@/data/dummy-data.json";
 
 function App() {
   return (

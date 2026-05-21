@@ -1,5 +1,5 @@
-import FormFilter from "../components/FormFilter";
-import ToDoGrid from "../components/ToDoGrid";
+import FormFilter from "@/components/FormFilter";
+import ToDoGrid from "@/components/ToDoGrid";
 
 export default function Main({ data }) {
   const filteredTags = [];

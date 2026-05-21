@@ -1,14 +1,25 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faRightToBracket } from "@fortawesome/free-solid-svg-icons";
 
 function OpenSidebar() {
   return (
-    <div className="drawer ">
+    <div className="drawer">
       <input id="my-drawer-1" type="checkbox" className="drawer-toggle" />
-      <div className="drawer-content ">
-        {/* Page content here */}
+      <div className="drawer-content">
         <label htmlFor="my-drawer-1" className="btn drawer-button">
-          <FontAwesomeIcon className="text-xl" icon={faRightToBracket} />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M4 6h16M4 12h16M4 18h7"
+            />
+          </svg>
         </label>
       </div>
       <div className="drawer-side">

@@ -1,5 +1,5 @@
-import Button from "../components/Button";
-import Search from "../components/Search";
+import Button from "@/components/Button";
+import Search from "@/components/Search";
 
 export default function Footer() {
   return (
