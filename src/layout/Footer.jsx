@@ -3,9 +3,9 @@ import Search from "../components/Search";
 
 export default function Footer() {
   return (
-    <footer className="flex justify-center p-4 gap-4">
+    <footer className="fixed left-0 w-full bottom-0 flex justify-center items-center p-4 gap-4 h-16 bg-base-100 md:hidden ">
       <Button>+</Button>
-      <Search></Search>
+      <Search />
     </footer>
   );
 }

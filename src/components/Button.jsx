@@ -3,7 +3,7 @@ function Button({ children, onClick, className = "" }) {
     <button
       type="button"
       onClick={onClick}
-      className={`primary ${className}`}
+      className={`btn primary ${className}`}
       aria-label="button"
     >
       {children}

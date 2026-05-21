@@ -6,7 +6,7 @@ import dummy_data from "../src/data/dummy-data.json";
 
 function App() {
   return (
-    <div className="flex flex-col justify-between w-full h-screen overflow-hidden">
+    <div className="flex flex-col h-screen w-full bg-base-200/30 overflow-hidden relative">
       <Header />
       <Main data={dummy_data} />
       <Footer />

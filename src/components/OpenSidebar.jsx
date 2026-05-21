@@ -3,9 +3,9 @@ import { faRightToBracket } from "@fortawesome/free-solid-svg-icons";
 
 function OpenSidebar() {
   return (
-    <div className="drawer">
+    <div className="drawer ">
       <input id="my-drawer-1" type="checkbox" className="drawer-toggle" />
-      <div className="drawer-content">
+      <div className="drawer-content ">
         {/* Page content here */}
         <label htmlFor="my-drawer-1" className="btn drawer-button">
           <FontAwesomeIcon className="text-xl" icon={faRightToBracket} />

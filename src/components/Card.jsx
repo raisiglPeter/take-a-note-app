@@ -8,18 +8,7 @@ import {
 
 export default function Card({ content }) {
   return (
-    <div className="card card-xs bg-base-100 shadow-sm border border-base-300 h-full w-full group overflow-hidden transition-all duration-200 hover:shadow-md ">
-      {/* 1. Optional Image metadata.imageUrl */}
-      {content.metadata.imageUrl && content.metadata.imageAlt && (
-        <figure className="h-16 overflow-hidden">
-          <img
-            src={content.metadata.imageUrl}
-            alt={content.metadata.imageAlt || "Note image"}
-            className="w-full object-cover"
-          />
-        </figure>
-      )}
-
+    <div className="card card-xs bg-base-100 shadow-sm border border-base-300 h-full w-full group overflow-hidden transition-all duration-200 hover:shadow-lg hover:border hover:border-gray-300">
       {/* 2. Title */}
       <div className="drag-handle p-2 cursor-move flex justify-start items-center bg-gray-100">
         <h2
@@ -29,9 +18,9 @@ export default function Card({ content }) {
         </h2>
       </div>
 
-      <div className="card-body pt-0">
+      <div className="card-body p-0">
         {/* 3. Main Content Area */}
-        <div className="text-[12px] opacity-80 flex-1">
+        <div className="text-[12px] opacity-80 flex-1 p-2">
           {content.type === "checklist" ? (
             <ul className="space-y-1">
               {content.metadata.items?.slice(0, 4).map((item, i) => (
@@ -54,6 +43,17 @@ export default function Card({ content }) {
             <p className="line-clamp-4 leading-relaxed">{content.content}</p>
           )}
         </div>
+
+        {/* 1. Optional Image metadata.imageUrl */}
+        {content.metadata.imageUrl && content.metadata.imageAlt && (
+          <figure className="h-16 overflow-hidden">
+            <img
+              src={content.metadata.imageUrl}
+              alt={content.metadata.imageAlt || "Note image"}
+              className="w-full object-cover"
+            />
+          </figure>
+        )}
 
         {/* 4. Keep Action Bar: Using your custom Button component */}
         <div className="card-actions justify-between items-center mt-2 opacity-0 group-hover:opacity-100 transition-opacity">

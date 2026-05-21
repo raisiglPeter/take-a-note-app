@@ -1,7 +1,7 @@
-function FormFilter({ labels }) {
+function FormFilter({ tags }) {
   return (
-    <form className="ml-2 mt-2">
-      {labels.map((tag) => (
+    <form className="m-4 mb-0">
+      {tags.map((tag) => (
         <input
           className="btn mr-2"
           type="checkbox"
