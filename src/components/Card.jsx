@@ -6,13 +6,15 @@ import {
   faRotateLeft,
 } from "@fortawesome/free-solid-svg-icons";
 
+// FIXME: TODO: refactor card so it's not this
+
 export default function Card({ content }) {
   return (
     <div className="card card-xs bg-base-100 shadow-sm border border-base-300 h-full w-full group overflow-hidden transition-all duration-200 hover:shadow-lg hover:border hover:border-gray-300">
       {/* 2. Title */}
       <div className="drag-handle p-2 cursor-move flex justify-start items-center bg-gray-100">
         <h2
-          className={`text-sm font-bold truncate pr-2 ${content.title || "italic"}`}
+          className={`text-sm font-bold truncate pr-2 ${content.title || "italic font-medium"}`}
         >
           {content.title || "Untitled"}
         </h2>

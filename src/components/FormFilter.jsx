@@ -1,18 +1,16 @@
-function FormFilter({ tags }) {
-  return (
-    <form className="m-4 mb-0">
-      {tags.map((tag) => (
-        <input
-          className="btn mr-2"
-          type="checkbox"
-          name="frameworks"
-          aria-label={tag}
-        />
-      ))}
+import TagList from "./TagList";
 
-      <input className="btn btn-square" type="reset" value="×" />
-    </form>
+export default function FormFilter({ tags }) {
+  return (
+    <div className="filter w-full overflow-x-auto whitespace-nowrap [scrollbar-width:none] [&::-webkit-scrollbar]:hidden [-webkit-overflow-scrolling:touch] p-4 pb-0">
+      <input
+        className="btn filter-reset"
+        type="radio"
+        name="desktop-tags"
+        aria-label="All"
+        defaultChecked
+      />
+      <TagList tags={tags} groupName="desktop-tags" />
+    </div>
   );
 }
-
-export default FormFilter;

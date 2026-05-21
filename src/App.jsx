@@ -1,16 +1,17 @@
 import Header from "@/layout/Header";
 import Main from "@/layout/Main";
 import Footer from "@/layout/Footer";
+import SidebarDrawer from "@/components/SidebarDrawer";
 
 import dummy_data from "@/data/dummy-data.json";
 
 function App() {
   return (
-    <div className="flex flex-col h-screen w-full bg-base-200/30 overflow-hidden relative">
+    <SidebarDrawer data={dummy_data}>
       <Header />
       <Main data={dummy_data} />
       <Footer />
-    </div>
+    </SidebarDrawer>
   );
 }
 

@@ -1,11 +1,15 @@
-function TagList({ list }) {
+export default function TagList({ tags, groupName = "metaframeworks" }) {
   return (
-    <ul>
-      {list.map((tag) => (
-        <li>{tag}</li>
+    <>
+      {tags.map((tag) => (
+        <input
+          key={tag}
+          className="btn"
+          type="radio"
+          name={groupName}
+          aria-label={tag}
+        />
       ))}
-    </ul>
+    </>
   );
 }
-
-export default TagList;
