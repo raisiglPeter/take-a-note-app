@@ -27,7 +27,7 @@ function ToDoGrid({ data = [], onNoteClick }) {
   };
 
   return (
-    <div ref={containerRef} className="relative w-full max-w-7xl mx-auto">
+    <div ref={containerRef} className="relative w-full max-w-7xl mx-auto -mt-2">
       {mounted && (
         <ResponsiveGridLayout
           layouts={layouts}
@@ -44,7 +44,7 @@ function ToDoGrid({ data = [], onNoteClick }) {
           {data.map((note) => (
             <div
               key={note.id}
-              className="cursor-default"
+              className="cursor-default hover:shadow-lg"
               onClick={() => {
                 if (!dragOccurred && onNoteClick) {
                   onNoteClick(note);

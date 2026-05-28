@@ -65,5 +65,139 @@
         { "text": "Fix Tailwind v4 CSS squiggles", "completed": true }
       ]
     }
+  },
+  {
+    "id": "6",
+    "title": "Project Ideas",
+    "content": "Build a MERN Google Keep clone with Supabase and Tailwind v4. Focus on mobile-first thumb accessibility.",
+    "type": "text",
+    "theme": "theme-blue",
+    "layout": { "x": 0, "y": 0, "w": 2, "h": 2 },
+    "metadata": {
+      "isPinned": true,
+      "tags": ["dev", "portfolio"]
+    }
+  },
+  {
+    "id": "7",
+    "title": "",
+    "content": "",
+    "type": "checklist",
+    "theme": "theme-green",
+    "layout": { "x": 2, "y": 0, "w": 2, "h": 3 },
+    "metadata": {
+      "items": [
+        { "text": "Pickled red onions ingredients", "completed": true },
+        { "text": "Chicken breast for fajitas", "completed": false },
+        { "text": "Eggs for salad", "completed": false },
+        { "text": "AKG K702 replacement pads", "completed": false }
+      ]
+    }
+  },
+  {
+    "id": "8",
+    "title": "Setup Inspo",
+    "content": "Check out some desk setups for ultra-wide monitors and high-fidelity audio gear.",
+    "type": "image",
+    "theme": "theme-yellow",
+    "layout": { "x": 4, "y": 0, "w": 2, "h": 4 },
+    "metadata": {
+      "imageUrl": "https://fastly.picsum.photos/id/0/5000/3333.jpg?hmac=_j6ghY5fCfSD6tvtcV74zXivkJSPIfR9B8w34XeQmvU",
+      "imageAlt": "Minimalist desk setup",
+      "tags": ["monitor", "audio"]
+    }
+  },
+  {
+    "id": "9",
+    "title": "Gaming Backlog",
+    "content": "Finish the DLC for Elden Ring before starting a new playthrough of Baldur's Gate 3.",
+    "type": "text",
+    "theme": "theme-red",
+    "layout": { "x": 0, "y": 2, "w": 2, "h": 2 },
+    "metadata": {
+      "reminder": "2026-06-01T10:00:00Z"
+    }
+  },
+  {
+    "id": "10",
+    "title": "Weekly Sprint Goals",
+    "content": "",
+    "type": "checklist",
+    "theme": "theme-blue",
+    "layout": { "x": 2, "y": 3, "w": 2, "h": 2 },
+    "metadata": {
+      "items": [
+        { "text": "Implement react-grid-layout", "completed": true },
+        { "text": "Connect Supabase Auth", "completed": false },
+        { "text": "Fix Tailwind v4 CSS squiggles", "completed": true }
+      ]
+    }
+  },
+  {
+    "id": "11",
+    "title": "Project Ideas",
+    "content": "Build a MERN Google Keep clone with Supabase and Tailwind v4. Focus on mobile-first thumb accessibility.",
+    "type": "text",
+    "theme": "theme-blue",
+    "layout": { "x": 0, "y": 0, "w": 2, "h": 2 },
+    "metadata": {
+      "isPinned": true,
+      "tags": ["dev", "portfolio"]
+    }
+  },
+  {
+    "id": "12",
+    "title": "",
+    "content": "",
+    "type": "checklist",
+    "theme": "theme-green",
+    "layout": { "x": 2, "y": 0, "w": 2, "h": 3 },
+    "metadata": {
+      "items": [
+        { "text": "Pickled red onions ingredients", "completed": true },
+        { "text": "Chicken breast for fajitas", "completed": false },
+        { "text": "Eggs for salad", "completed": false },
+        { "text": "AKG K702 replacement pads", "completed": false }
+      ]
+    }
+  },
+  {
+    "id": "13",
+    "title": "Setup Inspo",
+    "content": "Check out some desk setups for ultra-wide monitors and high-fidelity audio gear.",
+    "type": "image",
+    "theme": "theme-yellow",
+    "layout": { "x": 4, "y": 0, "w": 2, "h": 4 },
+    "metadata": {
+      "imageUrl": "https://fastly.picsum.photos/id/0/5000/3333.jpg?hmac=_j6ghY5fCfSD6tvtcV74zXivkJSPIfR9B8w34XeQmvU",
+      "imageAlt": "Minimalist desk setup",
+      "tags": ["monitor", "audio"]
+    }
+  },
+  {
+    "id": "14",
+    "title": "Gaming Backlog",
+    "content": "Finish the DLC for Elden Ring before starting a new playthrough of Baldur's Gate 3.",
+    "type": "text",
+    "theme": "theme-red",
+    "layout": { "x": 0, "y": 2, "w": 2, "h": 2 },
+    "metadata": {
+      "reminder": "2026-06-01T10:00:00Z"
+    }
+  },
+  {
+    "id": "15",
+    "title": "Weekly Sprint Goals",
+    "content": "",
+    "type": "checklist",
+    "theme": "theme-blue",
+    "layout": { "x": 2, "y": 3, "w": 2, "h": 2 },
+    "metadata": {
+      "items": [
+        { "text": "Implement react-grid-layout", "completed": true },
+        { "text": "Connect Supabase Auth", "completed": false },
+        { "text": "Fix Tailwind v4 CSS squiggles", "completed": true }
+      ]
+    }
   }
 ]

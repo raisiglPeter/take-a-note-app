@@ -10,7 +10,7 @@ import {
 
 export default function Card({ content }) {
   return (
-    <div className="card card-xs bg-base-100 shadow-sm border border-base-300 h-full w-full group overflow-hidden transition-all duration-200 hover:shadow-lg hover:border hover:border-gray-300">
+    <div className="card card-xs bg-base-100 shadow-sm h-full w-full group overflow-hidden">
       {/* 2. Title */}
       <div className="drag-handle p-2 cursor-move flex justify-start items-center bg-gray-100">
         <h2
@@ -58,7 +58,7 @@ export default function Card({ content }) {
         )}
 
         {/* 4. Keep Action Bar: Using your custom Button component */}
-        <div className="card-actions justify-between items-center mt-2 opacity-0 group-hover:opacity-100 transition-opacity">
+        <div className="card-actions justify-between items-center mt-2 p-2">
           <div className="flex gap-1">
             <Button className="btn-ghost btn-xs btn-circle">
               <FontAwesomeIcon
