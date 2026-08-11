@@ -12,7 +12,7 @@ function SidebarDrawer({ data, children }) {
         {children}
       </div>
 
-      {/* The slide-out side sheet tray */}
+      {/* The slide-out side tray */}
       <div className="drawer-side z-50">
         <label htmlFor="my-drawer-1" className="drawer-overlay"></label>
         <div className="bg-base-100 min-h-full w-72 p-4 border-r border-base-200 flex flex-col gap-2">

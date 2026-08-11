@@ -10,7 +10,7 @@ import {
 
 export default function Card({ content }) {
   return (
-    <div className="card card-xs bg-base-100 shadow-sm h-full w-full group overflow-hidden">
+    <div className="card card-xs bg-base-100 shadow-sm h-full w-full group overflow-hidden max-w-xs">
       {/* 2. Title */}
       <div className="drag-handle p-2 cursor-move flex justify-start items-center bg-gray-100">
         <h2

@@ -11,10 +11,8 @@ export default function Main({ data }) {
         <FormFilter tags={tags} />
       </div>
 
-      <div className="flex-1 w-full overflow-y-auto pb-24">
-        <div className="max-w-4xl mx-auto w-full">
-          <ToDoGrid data={data} />
-        </div>
+      <div className="flex-1 w-full overflow-y-auto pb-24 mx-auto">
+        <ToDoGrid data={data} />
       </div>
     </main>
   );
