@@ -1,75 +1,42 @@
-# React + TypeScript + Vite
+# Take-a-note
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Visit_App-blue?style=for-the-badge&logo=vibe)](https://take-a-note-app-raisigl.vercel.app/)
 
-Currently, two official plugins are available:
+Take-a-note is a responsive note-taking application inspired by Google Keep, paired with an effort/progress tracker. <br/>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+I created this project to serve two primary goals:
 
-## React Compiler
+1. **Personal Utility:** Build a completely free, privacy-focused alternative to Google Keep that runs cleanly locally and ensures zero data scraping.
+2. **Skill Up:** A real-world project to improve my full-stack TypeScript skills with a focus on strict type safety across database schemas, APIs and React in general.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Key Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Masonry Notes Layout** Google Keep-like layout with filters, tags and search.
+- **Rich Notes** Notes allow all content from text, to check-boxes and images.
+- **Progress Effort Tracker:** Progress tracking system based on my own daily time-block logging.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Tech Stack
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- **Frontend:** React, TypeScript, Vite
+- **Styling:** Vanilla CSS
+- **Backend & Database:** Supabase (PostgreSQL, Auth, RLS)
+- **State & Data Layer:** Custom React Hooks and modular API services
 
-```
+---
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+## Project Structure
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```text
+src/
+├── components/          # UI components (Masonry grid, Progress dashboard, Auth forms)
+├── context/             # Global Auth Context and Session Providers
+├── hooks/               # Custom React hooks (useNotes, useProgress, useAuth)
+├── lib/                 # Third-party client configurations (supabaseClient.ts)
+├── services/            # Isolated database access layers (notesService, progressService)
+├── types/               # TypeScript interfaces and Supabase schema types
+└── App.tsx              # Core layout and route management
 ```
