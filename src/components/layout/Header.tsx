@@ -5,6 +5,7 @@ import { handleApiError } from "../../utils/handleApiError";
 import Button from "../ui/Button";
 
 import "./Header.css";
+import Spinner from "../ui/Spinner";
 
 export default function Header() {
   const { signOut } = useAuth();
@@ -21,12 +22,13 @@ export default function Header() {
       setLoading(false);
     }
   };
+
   return (
     <header>
       <div className="headerLeft">Menu</div>
       <div className="headerRight">
         <Button disabled={loading} onClick={handleSignOut}>
-          {loading ? "Signing out..." : "Sign Out"}
+          {loading ? <Spinner size="2em" /> : "Sign Out"}
         </Button>
       </div>
     </header>

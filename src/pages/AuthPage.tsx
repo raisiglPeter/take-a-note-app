@@ -1,11 +1,12 @@
 // src/pages/AuthPage.tsx
-import { useState, type FormEvent } from "react";
+import { useState, type SyntheticEvent } from "react";
 import toast from "react-hot-toast";
 import { handleApiError } from "../utils/handleApiError";
 import { supabase } from "../lib/supabaseClient";
 
 import "./AuthPage.css";
 import Button from "../components/ui/Button";
+import Spinner from "../components/ui/Spinner";
 
 export default function AuthPage() {
   const [isSignUp, setIsSignUp] = useState(false);
@@ -13,26 +14,39 @@ export default function AuthPage() {
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: SyntheticEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
 
     try {
-      if (isSignUp) {
-        const { error } = await supabase.auth.signUp({ email, password });
-        if (error) throw error;
+      const { error } = await supabase.auth.signInWithPassword({
+        email,
+        password,
+      });
+      if (error) throw error;
 
-        toast.success("Check your email for confirmation!");
-      } else {
-        const { error } = await supabase.auth.signInWithPassword({
-          email,
-          password,
-        });
-        if (error) throw error;
-
-        toast.success("Successfully logged in!");
-      }
+      toast.success("Successfully logged in!");
     } catch (error: unknown) {
+      handleApiError(error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleSignUp = async () => {
+    if (!email || !password) {
+      toast.error("Please enter both email and password.");
+      return;
+    }
+
+    setLoading(true);
+
+    try {
+      const { error } = await supabase.auth.signUp({ email, password });
+      if (error) throw error;
+
+      toast.success("Check your email for confirmation!");
+    } catch (error) {
       handleApiError(error);
     } finally {
       setLoading(false);
@@ -61,33 +75,36 @@ export default function AuthPage() {
             required
           />
 
-          <div className="signUpButtons">
-            {/* Primary Submit Button */}
-            <Button type="submit" disabled={loading}>
-              {loading
-                ? "Processing..."
-                : isSignUp
-                  ? "Create Account"
-                  : "Log In"}
-            </Button>
-
-            {/* Switch Mode Button */}
-            <Button
-              type="button"
-              onClick={() => {
-                setIsSignUp(!isSignUp);
-              }}
-              disabled={loading}
-            >
-              {isSignUp ? "Switch to Log In" : "Switch to Sign Up"}
-            </Button>
-          </div>
+          {loading ? (
+            <Spinner />
+          ) : (
+            <div className="signUpButtons">
+              <Button type="submit" disabled={loading}>
+                {loading ? "Processing..." : "Log In"}
+              </Button>
+              <Button
+                type="button"
+                onClick={handleSignUp}
+                disabled={loading}
+                variant="secondary"
+              >
+                {loading ? "Processing..." : "Sign Up"}
+              </Button>
+            </div>
+          )}
         </form>
       </div>
 
       <div className="authPage-right">
-        <h3>Take-a-Note</h3>
-        <p>Your privacy-focused markdown notes & daily progress tracker.</p>
+        <div className="authPage-right-text">
+          <h3>Take-a-Note</h3>
+          <p>Take some notes.</p>
+        </div>
+        <div className="authPage-right-lines">
+          {Array.from({ length: 9 }).map((_, index) => {
+            return <div key={index} className="authPage-right-line"></div>;
+          })}
+        </div>
       </div>
     </div>
   );
