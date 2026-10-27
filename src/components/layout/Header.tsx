@@ -28,7 +28,7 @@ export default function Header() {
       <div className="headerLeft">Menu</div>
       <div className="headerRight">
         <Button disabled={loading} onClick={handleSignOut}>
-          {loading ? <Spinner size="2em" /> : "Sign Out"}
+          {loading ? <Spinner size="stretch" /> : "Sign Out"}
         </Button>
       </div>
     </header>
