@@ -8,7 +8,6 @@ export default function AppLayout() {
   return (
     <div className="appLayout">
       <Header />
-      <Spinner width="50px" height="50px" />
       <Main />
     </div>
   );

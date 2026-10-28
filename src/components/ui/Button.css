@@ -1,30 +1,47 @@
 button.ui-button {
   cursor: pointer;
   padding: 0.75rem 1.5rem;
-  min-width: 120px;
-  height: 100%;
   border-radius: 0.5rem;
-  display: flex;
-  justify-content: center;
+  border: 2px solid black;
+  font-weight: 600;
+  display: inline-flex;
   align-items: center;
-  text-align: center;
-  border: 2px black solid;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: ease-in-out 0.1s;
+  box-shadow: 0px 2px 0px 0px black;
+}
+
+button.ui-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0px 4px 0px 0px black;
+}
+
+button.ui-button:active:not(:disabled) {
+  transform: translateY(0px);
+  box-shadow: 0px 1px 0px 0px black;
+}
+
+button.ui-button.full-width {
+  width: 100%;
+}
+
+button.ui-button.fit-width {
+  width: fit-content;
+}
+
+/* Button Variants (Primary / Secondary / Danger) */
+button.ui-button.ui-button--primary {
   background-color: white;
   color: black;
-  font-weight: 600;
-  transition: ease-in-out 0.1s;
 }
 
-button.ui-button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0px 3px 0px 0px black;
+button.ui-button.ui-button--secondary {
+  background-color: black;
+  color: white;
 }
 
-button.ui-button:active {
-  transform: translateY(-1px);
-}
-
-button.ui-button:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
+button.ui-button.ui-button--danger {
+  background-color: #ff4d4d;
+  color: white;
 }

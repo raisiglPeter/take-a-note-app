@@ -5,33 +5,32 @@ div.authPage {
   background-color: white;
   width: 650px;
   height: 550px;
-  box-shadow: 0px 20px 50px 20px rgb(235, 235, 235, 0.5);
   border-radius: 1rem;
   margin: auto;
   border: 1px black solid;
-  border-bottom: 6px black solid;
+  border-bottom: 5px black solid;
 }
 
 div.authPage .authPage-left {
   flex: 1;
   padding: 1rem;
-  height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  gap: 2rem;
 }
 
 div.authPage .authPage-right {
   flex: 1;
   padding: 1rem;
-  border-bottom-right-radius: 1rem;
-  border-top-right-radius: 1rem;
   border-left: 1px solid black;
 }
 
 div.authPage .authPage-right .authPage-right-text {
   text-align: center;
+}
+
+.authPage-right-text > h3 {
+  font-size: x-large;
 }
 
 div.authPage-right .authPage-right-lines {
@@ -40,6 +39,7 @@ div.authPage-right .authPage-right-lines {
   align-items: start;
   justify-content: start;
   padding: 2rem;
+  padding-top: 0;
 }
 
 div.authPage-right .authPage-right-line {
@@ -52,26 +52,38 @@ div.authPage-right .authPage-right-line:last-child {
   width: 50%;
 }
 
-div.authPage .authPage-left > form {
+div.authPage-left-tabs {
   display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* Add to src/pages/AuthPage.css */
-div.authPage .authPage-left .signUpButtons {
-  display: flex;
-  gap: 1rem;
-  width: 100%;
   justify-content: center;
+  border: 2px solid black;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background-color: white;
 }
 
-div.authPage .authPage-left form input {
-  width: 100%;
+div.authPage-left-tabs > button {
+  flex: 1;
+  cursor: pointer;
   padding: 0.75rem;
-  border: 1px solid #ccc;
-  border-radius: 0.5rem;
-  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: 600;
+  background-color: white;
+  color: black;
+  border: none;
+  transition:
+    background-color 0.15s ease,
+    color 0.15s ease;
+}
+
+button.tab-button-left.active,
+button.tab-button-right.active {
+  background-color: black;
+  color: white;
+}
+
+div.authPage-left-tabs > button:not(.active):hover {
+  background-color: #f0f0f0;
 }

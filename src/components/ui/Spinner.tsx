@@ -1,20 +1,20 @@
 import "./Spinner.css";
 
 type SpinnerProps = {
-  width?: string;
-  height?: string;
+  size?: string;
+
   className?: string;
 };
 
 export default function Spinner({
-  width = "1em",
-  height = "1em",
+  size = "1em",
+
   className = "",
 }: SpinnerProps) {
   return (
     <div
       className={`loading-spinner ${className}`}
-      style={{ width: width, height: height }}
+      style={{ width: size, height: size }}
     ></div>
   );
 }
