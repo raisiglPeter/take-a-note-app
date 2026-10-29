@@ -31,3 +31,22 @@ export async function signUpUser(
   if (error) throw error;
   return data;
 }
+
+// FORGOT PASSWORD AND PASSWORD RESET
+export async function resetPasswordForEmail(email: string) {
+  const { data, error } = await supabase.auth.resetPasswordForEmail(email, {
+    redirectTo: `${window.location.origin}/update-password`,
+  });
+
+  if (error) throw error;
+  return data;
+}
+
+export async function updateUserPassword(newPassword: string) {
+  const { data, error } = await supabase.auth.updateUser({
+    password: newPassword,
+  });
+
+  if (error) throw error;
+  return data;
+}

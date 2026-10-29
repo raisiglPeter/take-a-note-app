@@ -13,11 +13,3 @@ div.authPage .authPage-left .signUpButtons {
   width: 100%;
   justify-content: center;
 }
-
-div.authPage .authPage-left form input {
-  width: 100%;
-  padding: 0.75rem;
-  border: 1px solid #ccc;
-  border-radius: 0.5rem;
-  font-size: 1rem;
-}

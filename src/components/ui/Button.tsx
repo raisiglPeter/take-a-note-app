@@ -1,5 +1,4 @@
 import type { ButtonHTMLAttributes } from "react";
-
 import "./Button.css";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -10,15 +9,21 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 export default function Button({
   variant = "primary",
   width = "full",
+  className = "",
   children,
   ...props
 }: ButtonProps) {
-  const variantClass = `ui-button--${variant}`;
-
-  const buttonWidth = width === "full" ? "full-width" : "fit-width";
+  const classes = [
+    "ui-button",
+    `ui-button--${variant}`,
+    `ui-button--${width}`,
+    className,
+  ]
+    .filter(Boolean)
+    .join(" ");
 
   return (
-    <button className={`ui-button ${variantClass} ${buttonWidth}`} {...props}>
+    <button className={classes} {...props}>
       {children}
     </button>
   );

@@ -1,4 +1,5 @@
-button.ui-button {
+.ui-button {
+  height: 50px;
   cursor: pointer;
   padding: 0.75rem 1.5rem;
   border-radius: 0.5rem;
@@ -8,40 +9,45 @@ button.ui-button {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  transition: ease-in-out 0.1s;
-  box-shadow: 0px 2px 0px 0px black;
+  transition:
+    transform 0.1s ease,
+    box-shadow 0.1s ease;
 }
 
-button.ui-button:hover:not(:disabled) {
-  transform: translateY(-2px);
-  box-shadow: 0px 4px 0px 0px black;
+.ui-button:hover:not(:disabled) {
+  transform: translateY(-4px);
+  box-shadow: 0px 3px 0px 0px black;
 }
 
-button.ui-button:active:not(:disabled) {
+.ui-button:active:not(:disabled) {
   transform: translateY(0px);
   box-shadow: 0px 1px 0px 0px black;
 }
 
-button.ui-button.full-width {
+.ui-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.ui-button--full {
   width: 100%;
 }
 
-button.ui-button.fit-width {
+.ui-button--fit-content {
   width: fit-content;
 }
 
-/* Button Variants (Primary / Secondary / Danger) */
-button.ui-button.ui-button--primary {
+.ui-button--primary {
   background-color: white;
   color: black;
 }
 
-button.ui-button.ui-button--secondary {
-  background-color: black;
+.ui-button--secondary {
+  background-color: rgb(98, 98, 98);
   color: white;
 }
 
-button.ui-button.ui-button--danger {
-  background-color: #ff4d4d;
+.ui-button--danger {
+  background-color: #d74242;
   color: white;
 }
