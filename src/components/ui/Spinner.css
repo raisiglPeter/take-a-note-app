@@ -1,0 +1,20 @@
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: rgba(0, 0, 0, 0.8) 2px solid;
+  border-radius: 100%;
+  background-color: transparent;
+  color: black;
+  animation: loading-spinner 0.8s infinite linear;
+  border-bottom: 0;
+  border-left: 0;
+}
+
+@keyframes loading-spinner {
+  from {
+    rotate: 0deg;
+  }
+  to {
+    rotate: 360deg;
+  }
+}

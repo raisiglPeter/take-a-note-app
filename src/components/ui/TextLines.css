@@ -1,0 +1,27 @@
+.text-lines {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  margin-bottom: 2rem;
+}
+
+.text-lines-desktop {
+  display: flex;
+}
+
+.text-line {
+  border-bottom: 2px solid black;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.text-line:last-child {
+  width: 50%;
+}
+
+@media (max-width: 1023px) {
+  .text-lines-mobile {
+    display: none;
+  }
+}

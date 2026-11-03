@@ -1,0 +1,47 @@
+.button-switch-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  border: 2px solid black;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background-color: white;
+  width: 100%;
+}
+
+.button-switch-container .switch-indicator {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  background-color: black;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 0;
+}
+
+.button-switch-container.right-active .switch-indicator {
+  transform: translateX(100%);
+}
+
+.button-switch-container > button {
+  position: relative;
+  flex: 1;
+  cursor: pointer;
+  padding: 0.75rem;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: 600;
+  background-color: transparent;
+  color: black;
+  border: none;
+  z-index: 1;
+  transition: color 0.3s ease-in-out;
+}
+
+.button-switch-container > button.active {
+  color: white;
+}

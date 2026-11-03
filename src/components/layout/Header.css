@@ -1,0 +1,15 @@
+header {
+  width: 100vw;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 0px 5px 2px #e0e0e0;
+  padding: 2rem;
+}
+div.account-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 125px;
+}

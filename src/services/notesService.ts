@@ -1,4 +1,5 @@
 import { supabase } from "../lib/supabaseClient";
+import { handleApiError } from "../utils/handleApiError";
 import type { Note } from "../types/supabase.types";
 
 export const notesService = {
@@ -8,7 +9,10 @@ export const notesService = {
       .select("*")
       .order("updated_at", { ascending: false });
 
-    if (error) throw new Error(error.message);
+    if (error) {
+      handleApiError(new Error(error.message));
+      throw error;
+    }
 
     return data || [];
   },
@@ -22,7 +26,10 @@ export const notesService = {
       .select()
       .single();
 
-    if (error) throw new Error(error.message);
+    if (error) {
+      handleApiError(new Error(error.message));
+      throw error;
+    }
 
     return data;
   },
@@ -35,7 +42,10 @@ export const notesService = {
       .select()
       .single();
 
-    if (error) throw new Error(error.message);
+    if (error) {
+      handleApiError(new Error(error.message));
+      throw error;
+    }
 
     return data;
   },
@@ -43,6 +53,9 @@ export const notesService = {
   async deleteNote(id: string): Promise<void> {
     const { error } = await supabase.from("notes").delete().eq("id", id);
 
-    if (error) throw new Error(error.message);
+    if (error) {
+      handleApiError(new Error(error.message));
+      throw error;
+    }
   },
 };
