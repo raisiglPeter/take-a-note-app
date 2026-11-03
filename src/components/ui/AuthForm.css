@@ -7,7 +7,7 @@ form.auth-form {
   align-items: center;
 }
 
-div.authPage .authPage-left .signUpButtons {
+.signUpButtons {
   display: flex;
   gap: 1rem;
   width: 100%;

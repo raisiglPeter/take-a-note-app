@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { AuthForm } from "../components/ui/AuthForm";
 import TextLines from "../components/ui/TextLines";
 import ButtonSwitch from "../components/ui/ButtonSwitch";
@@ -7,21 +7,6 @@ import "./AuthPage.css";
 
 export default function AuthPage() {
   const [isSignUp, setIsSignUp] = useState(false);
-  const [numOfLines, setNumOfLines] = useState(9);
-
-  useEffect(() => {
-    const updateLines = () => {
-      if (window.innerWidth <= 820) {
-        setNumOfLines(3);
-      } else {
-        setNumOfLines(9);
-      }
-    };
-
-    updateLines();
-    window.addEventListener("resize", updateLines);
-    return () => window.removeEventListener("resize", updateLines);
-  }, []);
 
   return (
     <div className="authPage">
@@ -38,7 +23,7 @@ export default function AuthPage() {
       <div className="authPage-right">
         <div className="authPage-right-text">
           <h3>Take-a-Note</h3>
-          <TextLines numOfLines={numOfLines} />
+          <TextLines />
         </div>
       </div>
     </div>

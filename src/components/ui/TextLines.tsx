@@ -1,14 +1,17 @@
 import "./TextLines.css";
 
-type TextLinesProp = {
-  numOfLines: number;
-};
-
-export default function TextLines({ numOfLines }: TextLinesProp) {
+export default function TextLines() {
   return (
     <div className="text-lines">
-      {Array.from({ length: numOfLines }).map((_, index) => {
-        return <div key={index} className="text-line"></div>;
+      {Array.from({ length: 9 }).map((_, index) => {
+        const desktopNumOfLines = [2, 3, 4, 5, 6, 7].includes(index);
+
+        return (
+          <div
+            key={index}
+            className={`text-line ${desktopNumOfLines ? "text-lines-mobile" : "text-lines-desktop"}`}
+          ></div>
+        );
       })}
     </div>
   );
