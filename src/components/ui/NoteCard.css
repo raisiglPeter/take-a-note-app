@@ -1,0 +1,12 @@
+.note-card {
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+.note-card-title {
+  padding: 0.5rem 0;
+}
+.note-card-content {
+  padding-bottom: 1rem;
+}

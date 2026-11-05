@@ -24,7 +24,7 @@ I created this project to serve two primary goals:
 - **Frontend:** React, TypeScript, Vite
 - **Styling:** Vanilla CSS
 - **Backend & Database:** Supabase (PostgreSQL, Auth, RLS)
-- **State & Data Layer:** Custom React Hooks and modular API services
+- **State & Data Layer:** TanStack React Query and modular API services
 
 ---
 

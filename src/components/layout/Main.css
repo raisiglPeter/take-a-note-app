@@ -1,7 +1,13 @@
 main {
   display: flex;
+  justify-content: start;
   flex-direction: column;
   align-items: center;
-  justify-content: start;
-  background-color: rgb(204, 237, 237);
+  width: 100%;
+  height: 100%;
+}
+.filter-and-sort {
+  width: 100%;
+  background-color: lightgray;
+  text-align: center;
 }

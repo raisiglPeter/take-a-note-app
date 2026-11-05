@@ -22,7 +22,7 @@ export default function AuthPage() {
 
       <div className="authPage-right">
         <div className="authPage-right-text">
-          <h3>Take-a-Note</h3>
+          <h3 className="authPage-right-heading">Take-a-Note</h3>
           <TextLines />
         </div>
       </div>

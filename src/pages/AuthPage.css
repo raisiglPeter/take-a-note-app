@@ -5,11 +5,11 @@ div.authPage {
   flex-direction: column-reverse;
   background-color: white;
   padding: 2rem 1rem;
-  width: 80%;
+  width: 90%;
   border: 1px black solid;
   border-bottom: 5px black solid;
   border-radius: 1rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 div.authPage .authPage-left {
@@ -27,6 +27,10 @@ div.authPage .authPage-right {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+div.authPage .authPage-right .authPage-right-heading {
+  font-size: x-large;
 }
 
 div.authPage .authPage-right .authPage-right-text {

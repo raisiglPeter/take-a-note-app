@@ -3,9 +3,9 @@ import toast from "react-hot-toast";
 import { useAuth } from "../../hooks/useAuth";
 import { handleApiError } from "../../utils/handleApiError";
 import Button from "../ui/Button";
+import Spinner from "../ui/Spinner";
 
 import "./Header.css";
-import Spinner from "../ui/Spinner";
 
 export default function Header() {
   const { signOut } = useAuth();
